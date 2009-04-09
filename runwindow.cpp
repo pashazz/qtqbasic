@@ -93,14 +93,17 @@ x = argsN.at(0);
 y = argsN.at(1);
 r = argsN.at(2);
 //необходимо отлаживать
-QColor c = QColor("Black");
 scene->addEllipse(x,y,r,r, QPen (QColor("Black")), QBrush (QColor ("White"), Qt::SolidPattern));
 break;
 
-//case 4:
+case 4:
+QColor c (num2col(argsN.at(3)));
 //указан ЦВЕТ
 //mark as TODO
-;
+x = argsN.at(0);
+y = argsN.at(1);
+r = argsN.at(2);
+scene->addEllipse(x,y,r,r, QPen (c), QBrush (QColor ("White"), Qt::SolidPattern));
 }
 
 
@@ -139,9 +142,30 @@ y1 = argsN.at (1);
 x2 = argsN.at(2);
 y2 = argsN.at (3);
         scene->addLine(x1, y1, x2, y2,  QPen (QColor ("Black")));
-
-    case 5:
+break;
+    case 5: case 6:
         //COLOR
+if (lstArgs.count() == 5) {
+QColor c (num2col(argsN.at(4)));
+ x1 = argsN.at(0);
+y1 = argsN.at (1);
+x2 = argsN.at(2);
+y2 = argsN.at (3);
+        scene->addLine(x1, y1, x2, y2,  QPen (c));
+    } else if (lstArgs.count() == 6) {
+        //WTF???
+        //draw polygon
+        QColor c (num2col(argsN.at(4)));
+        x1 = argsN.at(0);
+y1 = argsN.at (1);
+x2 = argsN.at(2);
+y2 = argsN.at (3);
+        QPointF X1 (x1,y1);
+        QPointF Y1 (x2,y2);
+        QRectF rect (X1, Y1);
+        QPolygonF p (rect);
+        scene->addPolygon(p, QPen (c));
+    }
 }
 }
 
@@ -157,45 +181,52 @@ void runWindow::changeEvent(QEvent *e)
 
 
 }
-Color runWindow::num2col(short color)
-   {
-      switch (color) {
-          case 0:
-          return QColor::black();
-          break;
-          case 1:
-          QColor c;
-          c.setBlue(255);
-         c = c.darker();
-          return c;
-          break;
-          case 2:
-          QColor c;
-          c.setGreen (255);
-          c = c.darker();
-          return c;
-          break;
-          case 3:
-          QColor c;
-          c.setCyan(255);
-          c = c.darker();
-          return c;
-          break;
-          case 4:
-            QColor c;
-          c.setRed(255);
-          c.darker();
-          return c;
-          break;
-          case 5:
-            QColor c;
-          c.setNamedColor("Purple");
-          c =   c.darker();
-          return c;
-          break;
-          case 6:
+QColor runWindow::num2col(short color)
 
+{
+            QColor c;
 
-      }
+   if (color == 0) {
+       c.setNamedColor("Black");
 
    }
+   if (color == 1) {
+    c.setNamedColor("Dark Blue");
+   }
+   if (color == 2) {
+       c.setNamedColor("Dark Green");
+   }
+   if (color == 3) {
+c.setNamedColor("Dark Cyan");
+   }
+   if (color == 4) {
+       c.setNamedColor("Dark Red");
+   }
+   if (color == 5) {
+       c.setNamedColor("Dark Purple");
+         }
+   if (color == 6) {
+       c.setNamedColor("Orange Brown");
+          }
+   if (color == 7) {
+       c.setNamedColor("Grey");
+   }
+if (color == 8) {
+    c.setNamedColor("Dark Grey");
+}
+if (color == 9) {
+    c.setNamedColor("Light Blue");
+}
+if (color == 10) {
+    c.setNamedColor("Light Green");
+}
+if (color == 11) {c.setNamedColor("Light Cyan");}
+if (color == 12) {c.setNamedColor("Light Red");}
+if (color == 13) {c.setNamedColor("Magenta");}
+if (color == 14) {c.setNamedColor("Bright White");}
+
+
+            return c;
+
+}
+
