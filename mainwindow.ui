@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>QtQBasic-GIT</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPlainTextEdit" name="plainTextEdit">
@@ -28,7 +28,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>460</y>
+      <y>440</y>
       <width>80</width>
       <height>17</height>
      </rect>
@@ -75,6 +75,9 @@
    <property name="text">
     <string>Exit</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
   </action>
   <action name="actionRun_Program">
    <property name="text">
@@ -84,6 +87,9 @@
   <action name="actionRun">
    <property name="text">
     <string>Run</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
  </widget>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Run program</string>
   </property>
   <widget class="QGraphicsView" name="gview">
    <property name="geometry">
@@ -23,17 +23,22 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="cmdClose">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>400</y>
-     <width>111</width>
-     <height>31</height>
+     <x>140</x>
+     <y>405</y>
+     <width>341</width>
+     <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>Close</string>
+    <string>Press ESC to quit</string>
    </property>
   </widget>
  </widget>

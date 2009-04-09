@@ -94,7 +94,7 @@ y = argsN.at(1);
 r = argsN.at(2);
 //необходимо отлаживать
 QColor c = QColor("Black");
-scene->addEllipse(x,y,r,r, QPen (QColor("Black")), QBrush (QColor ("Black"), Qt::SolidPattern));
+scene->addEllipse(x,y,r,r, QPen (QColor("Black")), QBrush (QColor ("White"), Qt::SolidPattern));
 break;
 
 //case 4:
@@ -134,8 +134,11 @@ foreach (arg, lstArgs) {
 
 switch (argsN.count()) {
     case 4: //обычное кол-во аргументов, рисую ЧЕРНЫМ
-        QLineF l = (x1, x2, y1, y2);
-    //    scene->addLine(x1, x2, y1, y2,  QPen (QColor ("Black"));
+x1 = argsN.at(0);
+y1 = argsN.at (1);
+x2 = argsN.at(2);
+y2 = argsN.at (3);
+        scene->addLine(x1, y1, x2, y2,  QPen (QColor ("Black")));
 
 }
 }
