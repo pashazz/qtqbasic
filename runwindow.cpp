@@ -134,12 +134,14 @@ foreach (arg, lstArgs) {
 
 switch (argsN.count()) {
     case 4: //обычное кол-во аргументов, рисую ЧЕРНЫМ
-x1 = argsN.at(0);
+        x1 = argsN.at(0);
 y1 = argsN.at (1);
 x2 = argsN.at(2);
 y2 = argsN.at (3);
         scene->addLine(x1, y1, x2, y2,  QPen (QColor ("Black")));
 
+    case 5:
+        //COLOR
 }
 }
 
@@ -152,4 +154,48 @@ void runWindow::changeEvent(QEvent *e)
     default:
         break;
     }
+
+
 }
+Color runWindow::num2col(short color)
+   {
+      switch (color) {
+          case 0:
+          return QColor::black();
+          break;
+          case 1:
+          QColor c;
+          c.setBlue(255);
+         c = c.darker();
+          return c;
+          break;
+          case 2:
+          QColor c;
+          c.setGreen (255);
+          c = c.darker();
+          return c;
+          break;
+          case 3:
+          QColor c;
+          c.setCyan(255);
+          c = c.darker();
+          return c;
+          break;
+          case 4:
+            QColor c;
+          c.setRed(255);
+          c.darker();
+          return c;
+          break;
+          case 5:
+            QColor c;
+          c.setNamedColor("Purple");
+          c =   c.darker();
+          return c;
+          break;
+          case 6:
+
+
+      }
+
+   }
