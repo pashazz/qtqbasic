@@ -2,6 +2,7 @@
 #define RUNWINDOW_H
 
 #include <QtGui>
+#include <QRegExp>
 
 namespace Ui {
     class runWindow;
