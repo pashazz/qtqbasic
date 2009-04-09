@@ -26,5 +26,5 @@ void MainWindow::onRun() {
 
 void MainWindow::on_cmdRun_clicked()
 {
-
+onRun();
 }

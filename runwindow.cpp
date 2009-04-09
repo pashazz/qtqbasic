@@ -1,6 +1,16 @@
 #include "runwindow.h"
 #include "ui_runwindow.h"
 
+//this be coming soon
+void runWindow::onCircle(QString args) {
+   ;
+}
+void runWindow::onPaint (QString args) {
+    ;
+}
+void runWindow::onLine (QString args) {
+    ;
+}
 runWindow::runWindow(QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::runWindow)
@@ -35,9 +45,9 @@ for (i = op.indexIn(str); i != op.matchedLength(); ++i) {
     opstr.append(str.at (i));
 }
 qDebug () << "opstr is" << opstr;
-QString strArgs = str.rightRef(i).toString();
+QString strArgs = str.rightRef(str.count() -1 - i).toString();
 qDebug () << "strArgs is " << strArgs;
-return runCode(opstr, strArgs);
+ runCode(opstr, strArgs);
 }
 }
 runWindow::~runWindow()
@@ -57,6 +67,7 @@ int runWindow::runCode(QString op, QString args) {
 
 
 }
+
 
 void runWindow::changeEvent(QEvent *e)
 {
