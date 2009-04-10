@@ -111,7 +111,48 @@ scene->addEllipse(x,y,r,r, QPen (c), QBrush (QColor ("White"), Qt::SolidPattern)
 
 
 void runWindow::onPaint (QString args) {
-    ;
+    qreal x = 0, y =0; //x,y
+    short c = 0; //color
+    QStringList lstArgs = args.split(",");
+int args_count = lstArgs.count();
+if (args_count < 2) {
+        QMessageBox msg;
+        msg.setText("Please add  arguments");
+        msg.setWindowTitle("Error, aborting...");
+        msg.exec();
+        return;
+    }
+QString arg;
+QList<qreal> argsN; //числа
+foreach (arg, lstArgs) {
+    arg.remove('(').remove(')'); //удаляем скобки
+    argsN.append(arg.toDouble());
+
+}
+switch (argsN.count()) {
+case 3:
+    //по-обычному
+    x = argsN.at(0);
+    y = argsN.at(1);
+    c = argsN.at (2);
+
+QGraphicsItem *it =    m_ui->gview->itemAt(x,y);
+ if (it == 0) {qDebug("null pointer");}
+ //draw polygon a
+/**************************
+ ЗДЕСЬ Я ЗАПУТАЛСЯ СОВСЕМ. ПОМОГИТЕ!! :D
+ Нужно решить следующую задачу.
+ Залить цветом (с) элемент QGraphicsItem *it. Если он ни на что не
+ указывает,залить всю сцену выбранным цветом.
+ Спасибо
+ *******************************/
+
+
+
+//select Item
+
+
+}
 }
 void runWindow::onLine (QString args) {
     //нужные переменные
@@ -153,7 +194,6 @@ x2 = argsN.at(2);
 y2 = argsN.at (3);
         scene->addLine(x1, y1, x2, y2,  QPen (c));
     } else if (lstArgs.count() == 6) {
-        //WTF???
         //draw polygon
         QColor c (num2col(argsN.at(4)));
         x1 = argsN.at(0);
@@ -229,4 +269,5 @@ if (color == 14) {c.setNamedColor("Bright White");}
             return c;
 
 }
+
 
