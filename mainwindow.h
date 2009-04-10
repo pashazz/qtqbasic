@@ -20,6 +20,7 @@ public:
 private slots:
     void on_cmdRun_clicked();
     void onRun();
+    void exit ();
 private:
     void ParseText ();
     Ui::MainWindowClass *ui;

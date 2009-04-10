@@ -6,36 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>856</width>
-    <height>529</height>
+    <width>954</width>
+    <height>748</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QtQBasic-GIT</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>841</width>
-      <height>411</height>
+      <x>20</x>
+      <y>0</y>
+      <width>651</width>
+      <height>671</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QPushButton" name="cmdRun">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>440</y>
-      <width>80</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Run</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPlainTextEdit" name="plainTextEdit"/>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -43,7 +35,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>856</width>
+     <width>954</width>
      <height>18</height>
     </rect>
    </property>
@@ -95,5 +87,22 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>menuBar</sender>
+   <signal>triggered(QAction*)</signal>
+   <receiver>menuBar</receiver>
+   <slot>repaint()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>16</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

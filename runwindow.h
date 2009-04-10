@@ -22,6 +22,7 @@ protected:
     void onCircle (QString args);
     void onPaint (QString args);
     QColor num2col (short color);
+    void onCls ();
 private:
     Ui::runWindow *m_ui;
     QGraphicsScene *scene;

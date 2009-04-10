@@ -6,39 +6,39 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>621</width>
-    <height>438</height>
+    <width>662</width>
+    <height>518</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Run program</string>
   </property>
-  <widget class="QGraphicsView" name="gview">
+  <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>10</y>
-     <width>610</width>
-     <height>380</height>
+     <y>20</y>
+     <width>561</width>
+     <height>471</height>
     </rect>
    </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="gview"/>
+    </item>
+   </layout>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="lblCoor">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>405</y>
-     <width>341</width>
-     <height>21</height>
+     <x>580</x>
+     <y>90</y>
+     <width>71</width>
+     <height>16</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
    <property name="text">
-    <string>Press ESC to quit</string>
+    <string>Not at scene</string>
    </property>
   </widget>
  </widget>

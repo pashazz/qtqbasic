@@ -10,6 +10,7 @@ runWindow::runWindow(QWidget *parent) :
 scene = new QGraphicsScene (this);
 
   m_ui->gview->setScene(scene);
+  m_ui->gview->setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
 
 }
 int runWindow::start (QString code)
@@ -43,7 +44,7 @@ qDebug () << "opstr is" << opstr;
 QString strArgs = str.rightRef(str.count() -1 - i).toString();
 //if (str.count()  - i == 0) {strArgs = "";} //maybe it need
 qDebug () << "strArgs is " << strArgs;
- runCode(opstr, strArgs);
+runCode(opstr, strArgs);
 
 }
 }
@@ -57,7 +58,14 @@ int runWindow::runCode(QString op, QString args) {
     if (op == "CIRCLE") { onCircle(args);}
     else if (op == "LINE") { onLine(args);}
     else if (op == "PAINT") { onPaint(args);}
+    else if (op == "CLS") {onCls();}
     else {/* here is ERROR */
+        QMessageBox msg;
+        msg.setIcon(QMessageBox::Critical);
+        msg.setText("Incorrect operator: " + op);
+        msg.setWindowTitle("Error,aborting");
+        msg.exec();
+
     return -1;
             }
 
@@ -136,8 +144,31 @@ case 3:
     y = argsN.at(1);
     c = argsN.at (2);
 
-QGraphicsItem *it =    m_ui->gview->itemAt(x,y);
- if (it == 0) {qDebug("null pointer");}
+if (QGraphicsItem *it = m_ui->gview->itemAt(x,y)) {
+    qDebug() << "element grabbed: " << it;
+    //код ниже нуждается в отладке
+    it->setSelected(true);
+//Получаем QPainterPath
+    QPainterPath path = scene->selectionArea();
+    QPainter *paint = new QPainter (m_ui->gview);
+    paint->fillPath(path, num2col(c));
+
+}
+    else {
+        qDebug () << "element not grabbed: ";
+        //redraws background
+     QBrush b (num2col (c));
+     m_ui->gview->setBackgroundBrush(b);
+     m_ui->gview->update();
+    }
+/*if (it == 0) {qDebug("null pointer");
+//redraws background
+     QBrush b (num2col (c));
+     m_ui->gview->setBackgroundBrush(b);
+     m_ui->gview->update();
+
+ }
+ */
  //draw polygon a
 /**************************
  ЗДЕСЬ Я ЗАПУТАЛСЯ СОВСЕМ. ПОМОГИТЕ!! :D
@@ -149,7 +180,7 @@ QGraphicsItem *it =    m_ui->gview->itemAt(x,y);
 
 
 
-//select Item
+
 
 
 }
@@ -270,4 +301,8 @@ if (color == 14) {c.setNamedColor("Bright White");}
 
 }
 
+
+void runWindow::onCls() {
+    scene->clear();
+}
 
