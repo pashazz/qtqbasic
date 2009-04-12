@@ -7,8 +7,7 @@ class Worker : public QObject
 {
 public:
     Worker();
-//работа с файлами
-
+QString syntaxCheck (const QString &op, const QString &args);
  private:
 
 };

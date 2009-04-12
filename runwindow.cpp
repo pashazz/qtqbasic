@@ -15,8 +15,6 @@ scene = new QGraphicsScene (this);
 }
 int runWindow::start (QString code)
 {
-
-
     //spit
     QStringList strs = code.split("\n");
     QString str;

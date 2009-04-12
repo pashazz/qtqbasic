@@ -22,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->mainToolBar->addAction(ui->actionSave);
     ui->mainToolBar->addAction(ui->actionSave_As);
     ui->mainToolBar->addAction(ui->actionExit);
+ui->statusBar->showMessage(tr("QtQBasic started"));
+
 
 }
 QString MainWindow::strippedName(const QString &fileName) {
