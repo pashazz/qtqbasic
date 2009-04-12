@@ -8,11 +8,15 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     worker.cpp \
     runwindow.cpp \
-    about.cpp
+    about.cpp \
+    finder.cpp
 HEADERS += mainwindow.h \
     worker.h \
     runwindow.h \
-    about.h
+    about.h \
+    finder.h
 FORMS += mainwindow.ui \
     runwindow.ui \
-    about.ui
+    about.ui \
+    finder.ui
+RESOURCES += qtqbasic.qrc

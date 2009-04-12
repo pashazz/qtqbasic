@@ -4,6 +4,7 @@
 #include <QtGui>
 #include "worker.h"
 #include "about.h"
+#include "finder.h"
 namespace Ui
 {
     class MainWindowClass;
@@ -27,7 +28,11 @@ private slots:
     void newFile();
     bool saveAs ();
     void wasModified();
+    void findText();
+
+
 private:
+    void createEditToolbar ();
     bool maybeSave();
     bool save (const QString &fileName);
     void load (const QString &fileName);
@@ -35,6 +40,10 @@ private:
     void ParseText ();
     QString curFile;
     QString strippedName (const QString &fileName);
+    //действия для копирования и вставки
+
+    QToolBar *editToolBar;
+
 protected:
     void closeEvent (QCloseEvent *event);
      Ui::MainWindowClass *ui;

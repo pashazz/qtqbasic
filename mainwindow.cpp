@@ -14,15 +14,26 @@ MainWindow::MainWindow(QWidget *parent)
     connect (ui->actionNew, SIGNAL (triggered()), this, SLOT (newFile()));
     connect (ui->actionSave_As, SIGNAL (triggered()), this, SLOT (saveAs()));
     connect (ui->plainTextEdit->document(), SIGNAL (contentsChanged()), this, SLOT (wasModified()));
+    connect (ui->actionCut, SIGNAL(triggered()), ui->plainTextEdit, SLOT (cut()));
+    connect (ui->actionCopy, SIGNAL(triggered()), ui->plainTextEdit, SLOT (copy()));
+    connect (ui->actionPaste, SIGNAL(triggered()), ui->plainTextEdit, SLOT (paste()));
+    connect(ui->actionRedo, SIGNAL (triggered()), ui->plainTextEdit, SLOT (redo()));
+    connect (ui->actionUndo, SIGNAL (triggered()), ui->plainTextEdit, SLOT (undo()));
+    connect (ui->actionFind, SIGNAL (triggered()), this, SLOT (findText()));
     setCentralWidget(ui->plainTextEdit);
     setCurrent("");
+
     //fill ToolBar
     ui->mainToolBar->addAction(ui->actionNew);
     ui->mainToolBar->addAction(ui->actionOpen);
     ui->mainToolBar->addAction(ui->actionSave);
     ui->mainToolBar->addAction(ui->actionSave_As);
     ui->mainToolBar->addAction(ui->actionExit);
+
+    //create edit actions
+createEditToolbar();
 ui->statusBar->showMessage(tr("QtQBasic started"));
+
 
 
 }
@@ -129,6 +140,31 @@ void MainWindow::load(const QString &fileName) {
        ui->plainTextEdit->setPlainText(in.readAll());
        QApplication::restoreOverrideCursor();
        setCurrent(fileName);    statusBar()->showMessage(tr("File loaded: %1").arg(fileName), 3000);
+
+
+}
+
+void MainWindow::createEditToolbar() {
+editToolBar = addToolBar(tr ("Edit"));
+editToolBar->addAction(ui->actionUndo);
+editToolBar->addAction(ui->actionRedo);
+editToolBar->addAction(ui->actionCut);
+editToolBar->addAction(ui->actionCopy);
+editToolBar->addAction(ui->actionPaste);
+editToolBar->addAction(ui->actionFind);
+}
+
+void MainWindow::findText() {
+  /*  Finder *f = new Finder (this);
+    f->show();
+
+if (f->result() == QDialog::Accepted)
+    {
+    QString findText = f->getFindText();
+   // QTextDocument::FindFlag flags = f->getFlags();
+    ui->plainTextEdit->document()->find(findText, 0, 0);
+    */;
+}
 
 
 }
