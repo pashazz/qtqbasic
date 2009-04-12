@@ -7,9 +7,12 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     worker.cpp \
-    runwindow.cpp
+    runwindow.cpp \
+    about.cpp
 HEADERS += mainwindow.h \
     worker.h \
-    runwindow.h
+    runwindow.h \
+    about.h
 FORMS += mainwindow.ui \
-    runwindow.ui
+    runwindow.ui \
+    about.ui

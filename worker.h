@@ -6,8 +6,9 @@
 class Worker : public QObject
 {
 public:
-    Worker(QString op, QString args);
-//QRectF int2float (QRect *rect);
+    Worker();
+//работа с файлами
+
  private:
 
 };

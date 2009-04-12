@@ -8,9 +8,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     connect (ui->actionRun,SIGNAL (triggered()), this, SLOT (onRun()));
     connect (ui->actionExit, SIGNAL (triggered()), this, SLOT (exit()));
+    connect (ui->actionAbout, SIGNAL(triggered()),this, SLOT (aboutme()));
    //this->setLayout(ui->Hlay);
 }
 
+void MainWindow::aboutme() {
+    about *a = new about (this);
+    a->show();
+}
 MainWindow::~MainWindow()
 {
     delete ui;

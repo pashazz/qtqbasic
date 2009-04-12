@@ -3,7 +3,7 @@
 #include <QRegExp>
 #include <QtGui>
 #include "worker.h"
-
+#include "about.h"
 namespace Ui
 {
     class MainWindowClass;
@@ -21,6 +21,7 @@ private slots:
     void on_cmdRun_clicked();
     void onRun();
     void exit ();
+    void aboutme ();
 private:
     void ParseText ();
     Ui::MainWindowClass *ui;

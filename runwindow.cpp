@@ -53,6 +53,7 @@ runWindow::~runWindow()
     delete m_ui;
 
 }
+
 int runWindow::runCode(QString op, QString args) {
     // Running the operator
     if (op == "CIRCLE") { onCircle(args);}
@@ -78,8 +79,7 @@ void runWindow::onCircle(QString args) {
     qreal x = 0, y = 0, r = 0;
 
 
-
-QStringList lstArgs = args.split(",");
+    QStringList lstArgs = args.split(",");
 int args_count = lstArgs.count();
 if (args_count < 3) {
         QMessageBox msg;
@@ -91,10 +91,12 @@ if (args_count < 3) {
 QString arg;
 QList<qreal> argsN; //числа
 foreach (arg, lstArgs) {
-    arg.remove('(').remove(')'); //удаляем скобки
+    arg.remove('(').remove(')').remove ('-'); //удаляем скобки
     argsN.append(arg.toDouble());
 
 }
+
+
 switch (argsN.count()) {
 case 3:
 x = argsN.at(0);
@@ -107,16 +109,13 @@ break;
 case 4:
 QColor c (num2col(argsN.at(3)));
 //указан ЦВЕТ
-//mark as TODO
 x = argsN.at(0);
 y = argsN.at(1);
 r = argsN.at(2);
 scene->addEllipse(x,y,r,r, QPen (c), QBrush (QColor ("White"), Qt::SolidPattern));
+break;
 }
-
-
     }
-
 
 void runWindow::onPaint (QString args) {
     qreal x = 0, y =0; //x,y
@@ -133,7 +132,7 @@ if (args_count < 2) {
 QString arg;
 QList<qreal> argsN; //числа
 foreach (arg, lstArgs) {
-    arg.remove('(').remove(')'); //удаляем скобки
+    arg.remove('(').remove(')').remove ('-'); //удаляем скобки
     argsN.append(arg.toDouble());
 
 }
@@ -178,11 +177,6 @@ if (QGraphicsItem *it = m_ui->gview->itemAt(x,y)) {
  Спасибо
  *******************************/
 
-
-
-
-
-
 }
 }
 void runWindow::onLine (QString args) {
@@ -202,7 +196,7 @@ if (args_count < 3) {
 QString arg;
 QList<qreal> argsN; //числа
 foreach (arg, lstArgs) {
-    arg.remove('(').remove(')'); //удаляем скобки
+    arg.remove('(').remove(')').remove ('-'); //удаляем скобки
     argsN.append(arg.toDouble());
 
 }
@@ -295,8 +289,6 @@ if (color == 11) {c.setNamedColor("Light Cyan");}
 if (color == 12) {c.setNamedColor("Light Red");}
 if (color == 13) {c.setNamedColor("Magenta");}
 if (color == 14) {c.setNamedColor("Bright White");}
-
-
             return c;
 
 }
@@ -305,4 +297,3 @@ if (color == 14) {c.setNamedColor("Bright White");}
 void runWindow::onCls() {
     scene->clear();
 }
-
