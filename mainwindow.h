@@ -18,13 +18,26 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_cmdRun_clicked();
+
     void onRun();
     void exit ();
     void aboutme ();
+    void openFile ();
+    bool saveFile ();
+    void newFile();
+    bool saveAs ();
+    void wasModified();
 private:
+    bool maybeSave();
+    bool save (const QString &fileName);
+    void load (const QString &fileName);
+    void setCurrent (const QString &fileName);
     void ParseText ();
-    Ui::MainWindowClass *ui;
+    QString curFile;
+    QString strippedName (const QString &fileName);
+protected:
+    void closeEvent (QCloseEvent *event);
+     Ui::MainWindowClass *ui;
 };
 
 #endif // MAINWINDOW_H
