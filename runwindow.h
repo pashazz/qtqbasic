@@ -23,10 +23,13 @@ protected:
     void onPaint (QString args);
     QColor num2col (short color);
     void onCls ();
+   virtual void paintEvent (QPaintEvent *e);
 
 private:
     Ui::runWindow *m_ui;
+    QGraphicsItem *it; //использую в Paint
     QGraphicsScene *scene;
+    short colornum;
 int runCode (QString op, QString args);
     //onDraw
 

@@ -8,7 +8,7 @@ runWindow::runWindow(QWidget *parent) :
 {
     m_ui->setupUi(this);
 scene = new QGraphicsScene (this);
-
+colornum = -1;
   m_ui->gview->setScene(scene);
   m_ui->gview->setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
 
@@ -140,15 +140,16 @@ case 3:
     x = argsN.at(0);
     y = argsN.at(1);
     c = argsN.at (2);
+it = m_ui->gview->scene()->itemAt(x,y);
 
-if (QGraphicsItem *it = m_ui->gview->itemAt(x,y)) {
+if (it != 0) {
     qDebug() << "element grabbed: " << it;
     //код ниже нуждается в отладке
-    it->setSelected(true);
-//Получаем QPainterPath
-    QPainterPath path = scene->selectionArea();
-    QPainter *paint = new QPainter (m_ui->gview);
-    paint->fillPath(path, num2col(c));
+    colornum =c;
+repaint();
+
+//paint->setBrush(QBrush(num2col(c)));
+
 
 }
     else {
@@ -294,4 +295,12 @@ if (color == 14) {c.setNamedColor("Bright White");}
 
 void runWindow::onCls() {
     scene->clear();
+}
+void runWindow::paintEvent(QPaintEvent *e) {
+    if (it != 0  && colornum != -1) {
+QPainter *p = new QPainter (this);
+p->setBrush(QBrush (num2col(colornum)));
+it->paint(p, new QStyleOptionGraphicsItem(), 0);
+it = 0;
+    }
 }
