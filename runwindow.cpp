@@ -93,15 +93,17 @@ foreach (arg, lstArgs) {
     argsN.append(arg.toDouble());
 
 }
-
-
+qreal new_x;
+qreal new_y;
 switch (argsN.count()) {
 case 3:
 x = argsN.at(0);
 y = argsN.at(1);
 r = argsN.at(2);
 //необходимо отлаживать
-scene->addEllipse(x,y,r,r, QPen (QColor("Black")), QBrush (QColor ("White"), Qt::SolidPattern));
+ new_x = x-r;
+ new_y = y-r;
+scene->addEllipse(new_x,new_y,r,r, QPen (QColor("Black")), QBrush (QColor ("White"), Qt::SolidPattern));
 break;
 
 case 4:
@@ -110,7 +112,9 @@ QColor c (num2col(argsN.at(3)));
 x = argsN.at(0);
 y = argsN.at(1);
 r = argsN.at(2);
-scene->addEllipse(x,y,r,r, QPen (c), QBrush (QColor ("White"), Qt::SolidPattern));
+ new_x = x-r;
+ new_y = y-r;
+scene->addEllipse(new_x,new_y,r,r, QPen (c), QBrush (QColor ("White"), Qt::SolidPattern));
 break;
 }
     }
@@ -298,9 +302,11 @@ void runWindow::onCls() {
 }
 void runWindow::paintEvent(QPaintEvent *e) {
     if (it != 0  && colornum != -1) {
-QPainter *p = new QPainter (this);
-p->setBrush(QBrush (num2col(colornum)));
-it->paint(p, new QStyleOptionGraphicsItem(), 0);
-it = 0;
+QPainter p (this);
+p.setBrush(QBrush (num2col(colornum)));
+it->paint(&p, new QStyleOptionGraphicsItem(), this);
+this->update();
+m_ui->gview->updateGeometry();
+
     }
 }

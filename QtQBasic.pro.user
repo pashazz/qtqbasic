@@ -60,7 +60,7 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-D13KygzohG,guid=63a06e5bd5ce09aa17308a8b49e20d47</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-nz0BtAmfId,guid=92d0184f3751f60fb62c84bb49e3bb39</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -69,7 +69,7 @@
     <value type="QString" >GCC_SPECS=</value>
     <value type="QString" >GDK_USE_XFT=1</value>
     <value type="QString" >GS_LIB=/home/pasha/.fonts</value>
-    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0::/home/pasha/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0:/home/pasha/.gtkrc-2.0-kde4:/home/pasha/.kde4/share/config/gtkrc-2.0</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pasha/.gtkrc::/home/pasha/.kde4/share/config/gtkrc</value>
     <value type="QString" >HOME=/home/pasha</value>
     <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/info</value>
@@ -82,6 +82,7 @@
     <value type="QString" >KDE_SESSION_UID=1000</value>
     <value type="QString" >KDE_SESSION_VERSION=4</value>
     <value type="QString" >LANG=ru_RU.UTF-8</value>
+    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LC_ALL=</value>
     <value type="QString" >LESS=-R -M --shift 5</value>
     <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
@@ -99,7 +100,7 @@
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >ROOTPATH=/usr/sbin:/usr/bin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15825,unix/pashazz:/tmp/.ICE-unix/15825</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15826,unix/pashazz:/tmp/.ICE-unix/15826</value>
     <value type="QString" >SHELL=/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
@@ -136,7 +137,7 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-D13KygzohG,guid=63a06e5bd5ce09aa17308a8b49e20d47</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-nz0BtAmfId,guid=92d0184f3751f60fb62c84bb49e3bb39</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -145,7 +146,7 @@
     <value type="QString" >GCC_SPECS=</value>
     <value type="QString" >GDK_USE_XFT=1</value>
     <value type="QString" >GS_LIB=/home/pasha/.fonts</value>
-    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0::/home/pasha/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0:/home/pasha/.gtkrc-2.0-kde4:/home/pasha/.kde4/share/config/gtkrc-2.0</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pasha/.gtkrc::/home/pasha/.kde4/share/config/gtkrc</value>
     <value type="QString" >HOME=/home/pasha</value>
     <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/info</value>
@@ -158,6 +159,7 @@
     <value type="QString" >KDE_SESSION_UID=1000</value>
     <value type="QString" >KDE_SESSION_VERSION=4</value>
     <value type="QString" >LANG=ru_RU.UTF-8</value>
+    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LC_ALL=</value>
     <value type="QString" >LESS=-R -M --shift 5</value>
     <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
@@ -175,7 +177,7 @@
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >ROOTPATH=/usr/sbin:/usr/bin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15825,unix/pashazz:/tmp/.ICE-unix/15825</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15826,unix/pashazz:/tmp/.ICE-unix/15826</value>
     <value type="QString" >SHELL=/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
