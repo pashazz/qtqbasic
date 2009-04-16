@@ -1,7 +1,15 @@
 #include "runwindow.h"
 #include "ui_runwindow.h"
 
+/*void paint(const QPoint point, int color)
+{
 
+   QList<QGraphicsItem *> list = scene->items(point);
+   for (int i = 0; i < list.size(); ++i)
+       qgraphicsitem_cast<MyItem *>(list.at(i))->setColor(color);
+}
+
+*/
 runWindow::runWindow(QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::runWindow)
@@ -150,9 +158,13 @@ if (it != 0) {
     qDebug() << "element grabbed: " << it;
     //код ниже нуждается в отладке
     colornum =c;
-repaint();
+    if (it != 0  && colornum != -1) {
+        QAbstractGraphicsShapeItem *item;
+        if  (item == dynamic_cast <QAbstractGraphicsShapeItem * > (it)) {
+            item->setBrush(QColor(num2col(colornum)));
+        }
+    }
 
-//paint->setBrush(QBrush(num2col(c)));
 
 
 }
@@ -222,17 +234,41 @@ x2 = argsN.at(2);
 y2 = argsN.at (3);
         scene->addLine(x1, y1, x2, y2,  QPen (c));
     } else if (lstArgs.count() == 6) {
-        //draw polygon
+        QBrush b;
         QColor c (num2col(argsN.at(4)));
+        if (lstArgs.at(5) == "BF") {b.setColor((c));
+          //draw polygon
         x1 = argsN.at(0);
-y1 = argsN.at (1);
-x2 = argsN.at(2);
-y2 = argsN.at (3);
+         y1 = argsN.at (1);
+     x2 = argsN.at(2);
+    y2 = argsN.at (3);
         QPointF X1 (x1,y1);
         QPointF Y1 (x2,y2);
         QRectF rect (X1, Y1);
         QPolygonF p (rect);
-        scene->addPolygon(p, QPen (c));
+
+        scene->addPolygon(p, QPen (c), QBrush(c));
+        return;
+        }
+
+        else if (lstArgs.at(5) == "B") {b.setColor(QColor("White"));}
+        else {return;}
+
+
+
+        //draw polygon
+        x1 = argsN.at(0);
+         y1 = argsN.at (1);
+     x2 = argsN.at(2);
+    y2 = argsN.at (3);
+        QPointF X1 (x1,y1);
+        QPointF Y1 (x2,y2);
+        QRectF rect (X1, Y1);
+        QPolygonF p (rect);
+
+        scene->addPolygon(p, QPen (c), b);
+
+
     }
 }
 }
@@ -291,7 +327,7 @@ if (color == 10) {
 if (color == 11) {c.setNamedColor("Light Cyan");}
 if (color == 12) {c.setNamedColor("Light Red");}
 if (color == 13) {c.setNamedColor("Magenta");}
-if (color == 14) {c.setNamedColor("Bright White");}
+if (color == 14) {c.setNamedColor("White");}
             return c;
 
 }
@@ -299,14 +335,4 @@ if (color == 14) {c.setNamedColor("Bright White");}
 
 void runWindow::onCls() {
     scene->clear();
-}
-void runWindow::paintEvent(QPaintEvent *e) {
-    if (it != 0  && colornum != -1) {
-QPainter p (this);
-p.setBrush(QBrush (num2col(colornum)));
-it->paint(&p, new QStyleOptionGraphicsItem(), this);
-this->update();
-m_ui->gview->updateGeometry();
-
-    }
 }

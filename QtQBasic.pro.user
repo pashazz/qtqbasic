@@ -60,11 +60,9 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-nz0BtAmfId,guid=92d0184f3751f60fb62c84bb49e3bb39</value>
-    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-LuGOF3uDN0,guid=817763d7173f32160798c69149e61c27</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
-    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
     <value type="QString" >EDITOR=/bin/nano</value>
     <value type="QString" >GCC_SPECS=</value>
     <value type="QString" >GDK_USE_XFT=1</value>
@@ -72,6 +70,7 @@
     <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0:/home/pasha/.gtkrc-2.0-kde4:/home/pasha/.kde4/share/config/gtkrc-2.0</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pasha/.gtkrc::/home/pasha/.kde4/share/config/gtkrc</value>
     <value type="QString" >HOME=/home/pasha</value>
+    <value type="QString" >HUSHLOGIN=FALSE</value>
     <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/info</value>
     <value type="QString" >JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
     <value type="QString" >JAVA_HOME=/etc/java-config-2/current-system-vm</value>
@@ -88,6 +87,7 @@
     <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
     <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
     <value type="QString" >LOGNAME=pasha</value>
+    <value type="QString" >MAIL=/var/mail/pasha</value>
     <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
     <value type="QString" >OPENGL_PROFILE=ati</value>
     <value type="QString" >PAGER=/usr/bin/less</value>
@@ -100,17 +100,19 @@
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >ROOTPATH=/usr/sbin:/usr/bin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15826,unix/pashazz:/tmp/.ICE-unix/15826</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/14798,unix/pashazz:/tmp/.ICE-unix/14798</value>
     <value type="QString" >SHELL=/bin/zsh</value>
-    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >SHLVL=3</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
+    <value type="QString" >TERM=linux</value>
     <value type="QString" >USB_DEVFS_PATH=/dev/bus/usb</value>
     <value type="QString" >USER=pasha</value>
     <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XAUTHORITY=/home/pasha/.Xauthority</value>
     <value type="QString" >XCURSOR_THEME=ComixCursors-opaque-Black-Large-Slim</value>
     <value type="QString" >XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/share</value>
-    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >XDG_SESSION_COOKIE=7a94a1f19dbf670c352f4d9949a82ae1-1239817254.446619-718193173</value>
     <value type="QString" >XSESSION=kde-4.2</value>
     <value type="QString" >_=/usr/bin/kdeinit4</value>
    </valuelist>
@@ -137,11 +139,9 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-nz0BtAmfId,guid=92d0184f3751f60fb62c84bb49e3bb39</value>
-    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-LuGOF3uDN0,guid=817763d7173f32160798c69149e61c27</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
-    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
     <value type="QString" >EDITOR=/bin/nano</value>
     <value type="QString" >GCC_SPECS=</value>
     <value type="QString" >GDK_USE_XFT=1</value>
@@ -149,6 +149,7 @@
     <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0:/home/pasha/.gtkrc-2.0-kde4:/home/pasha/.kde4/share/config/gtkrc-2.0</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pasha/.gtkrc::/home/pasha/.kde4/share/config/gtkrc</value>
     <value type="QString" >HOME=/home/pasha</value>
+    <value type="QString" >HUSHLOGIN=FALSE</value>
     <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/info</value>
     <value type="QString" >JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
     <value type="QString" >JAVA_HOME=/etc/java-config-2/current-system-vm</value>
@@ -165,6 +166,7 @@
     <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
     <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
     <value type="QString" >LOGNAME=pasha</value>
+    <value type="QString" >MAIL=/var/mail/pasha</value>
     <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
     <value type="QString" >OPENGL_PROFILE=ati</value>
     <value type="QString" >PAGER=/usr/bin/less</value>
@@ -177,17 +179,19 @@
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >ROOTPATH=/usr/sbin:/usr/bin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15826,unix/pashazz:/tmp/.ICE-unix/15826</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/14798,unix/pashazz:/tmp/.ICE-unix/14798</value>
     <value type="QString" >SHELL=/bin/zsh</value>
-    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >SHLVL=3</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
+    <value type="QString" >TERM=linux</value>
     <value type="QString" >USB_DEVFS_PATH=/dev/bus/usb</value>
     <value type="QString" >USER=pasha</value>
     <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XAUTHORITY=/home/pasha/.Xauthority</value>
     <value type="QString" >XCURSOR_THEME=ComixCursors-opaque-Black-Large-Slim</value>
     <value type="QString" >XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/share</value>
-    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >XDG_SESSION_COOKIE=7a94a1f19dbf670c352f4d9949a82ae1-1239817254.446619-718193173</value>
     <value type="QString" >XSESSION=kde-4.2</value>
     <value type="QString" >_=/usr/bin/kdeinit4</value>
    </valuelist>
