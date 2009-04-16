@@ -188,8 +188,8 @@ void runWindow::onLine (const QString &args) {
     //нужные переменные
     qreal x1 = 0, y1 = 0,  x2 = 0,  y2 = 0;
 
-
-QStringList lstArgs = args.split(",");
+QRegExp split (",|-");
+QStringList lstArgs = args.split(split);
 int args_count = lstArgs.count();
 if (args_count < 3) {
         QMessageBox msg;
@@ -217,6 +217,7 @@ break;
     case 5: case 6:
         //COLOR
 if (lstArgs.count() == 5) {
+ 
 QColor c (num2col(argsN.at(4)));
  x1 = argsN.at(0);
 y1 = argsN.at (1);
