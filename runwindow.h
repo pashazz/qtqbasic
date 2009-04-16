@@ -18,20 +18,22 @@ public:
 
 protected:
     virtual void changeEvent(QEvent *e);
-   void onLine (QString args);
-    void onCircle (QString args);
-    void onPaint (QString args);
+   void onLine (const QString &args);
+    void onCircle (const QString &args);
+    void onPaint (const QString &args);
     QColor num2col (short color);
-    void onCls ();
+    void onCls (const QString &args);
 
 
 private:
     Ui::runWindow *m_ui;
+    void appendOperations();
     QGraphicsItem *it; //использую в Paint
     QGraphicsScene *scene;
     short colornum;
 int runCode (QString op, QString args);
-    //onDraw
+
+QStringList drawOperations; //список операторов рисования
 
 };
 

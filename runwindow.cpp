@@ -1,15 +1,9 @@
 #include "runwindow.h"
 #include "ui_runwindow.h"
 
-/*void paint(const QPoint point, int color)
-{
 
-   QList<QGraphicsItem *> list = scene->items(point);
-   for (int i = 0; i < list.size(); ++i)
-       qgraphicsitem_cast<MyItem *>(list.at(i))->setColor(color);
-}
 
-*/
+
 runWindow::runWindow(QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::runWindow)
@@ -19,10 +13,17 @@ scene = new QGraphicsScene (this);
 colornum = -1;
   m_ui->gview->setScene(scene);
   m_ui->gview->setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
-
+  appendOperations();
+}
+void runWindow::appendOperations() {
+    drawOperations.append("CIRCLE");
+    drawOperations.append("LINE");
+    drawOperations.append("PAINT");
 }
 int runWindow::start (QString code)
 {
+
+
     //spit
     QStringList strs = code.split("\n");
     QString str;
@@ -50,8 +51,10 @@ qDebug () << "opstr is" << opstr;
 QString strArgs = str.rightRef(str.count() -1 - i).toString();
 //if (str.count()  - i == 0) {strArgs = "";} //maybe it need
 qDebug () << "strArgs is " << strArgs;
-runCode(opstr, strArgs);
 
+if (drawOperations.contains(opstr)) {
+runCode(opstr, strArgs);
+}
 }
 }
 runWindow::~runWindow()
@@ -62,10 +65,12 @@ runWindow::~runWindow()
 
 int runWindow::runCode(QString op, QString args) {
     // Running the operator
+    op.toUpper();
+
     if (op == "CIRCLE") { onCircle(args);}
     else if (op == "LINE") { onLine(args);}
     else if (op == "PAINT") { onPaint(args);}
-    else if (op == "CLS") {onCls();}
+    else if (op == "CLS") {onCls(args);}
     else {/* here is ERROR */
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
@@ -80,7 +85,7 @@ int runWindow::runCode(QString op, QString args) {
 
 }
 //this be coming soon
-void runWindow::onCircle(QString args) {
+void runWindow::onCircle(const  QString &args) {
     //объявим нужные переменные
     qreal x = 0, y = 0, r = 0;
 
@@ -127,7 +132,7 @@ break;
 }
     }
 
-void runWindow::onPaint (QString args) {
+void runWindow::onPaint (const QString &args) {
     qreal x = 0, y =0; //x,y
     short c = 0; //color
     QStringList lstArgs = args.split(",");
@@ -155,18 +160,13 @@ case 3:
 it = m_ui->gview->scene()->itemAt(x,y);
 
 if (it != 0) {
-    qDebug() << "element grabbed: " << it;
-    //код ниже нуждается в отладке
+
     colornum =c;
     if (it != 0  && colornum != -1) {
         QAbstractGraphicsShapeItem *item;
         if  (item = dynamic_cast <QAbstractGraphicsShapeItem * > (it)) {
             item->setBrush(QColor(num2col(colornum)));
-        }
-        else {qDebug() << "item is not a QAbstractGraphicsShapeItem";
-           /* if (QGraphicsEllipseItem *ell =dynamic_cast <QGraphicsEllipseItem * > (it)) {
-               ell->setBrush(QColor(num2col(colornum)));
-            }*/
+            item->setPen(QPen(num2col(colornum)));
         }
 
     }
@@ -175,32 +175,16 @@ if (it != 0) {
 
 }
     else {
-        qDebug () << "element not grabbed: ";
-        //redraws background
+                //redraws background
      QBrush b (num2col (c));
      m_ui->gview->setBackgroundBrush(b);
      m_ui->gview->update();
     }
-/*if (it == 0) {qDebug("null pointer");
-//redraws background
-     QBrush b (num2col (c));
-     m_ui->gview->setBackgroundBrush(b);
-     m_ui->gview->update();
 
- }
- */
- //draw polygon a
-/**************************
- ЗДЕСЬ Я ЗАПУТАЛСЯ СОВСЕМ. ПОМОГИТЕ!! :D
- Нужно решить следующую задачу.
- Залить цветом (с) элемент QGraphicsItem *it. Если он ни на что не
- указывает,залить всю сцену выбранным цветом.
- Спасибо
- *******************************/
 
 }
 }
-void runWindow::onLine (QString args) {
+void runWindow::onLine (const QString &args) {
     //нужные переменные
     qreal x1 = 0, y1 = 0,  x2 = 0,  y2 = 0;
 
@@ -339,6 +323,6 @@ if (color == 14) {c.setNamedColor("White");}
 }
 
 
-void runWindow::onCls() {
+void runWindow::onCls(const QString &args) {
     scene->clear();
 }
