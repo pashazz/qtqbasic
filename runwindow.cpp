@@ -101,17 +101,17 @@ foreach (arg, lstArgs) {
     argsN.append(arg.toDouble());
 
 }
-qreal new_x;
-qreal new_y;
+QPointF center;
 switch (argsN.count()) {
 case 3:
 x = argsN.at(0);
 y = argsN.at(1);
 r = argsN.at(2);
 //необходимо отлаживать
- new_x = x-r;
- new_y = y-r;
-scene->addEllipse(new_x,new_y,r,r, QPen (QColor("Black")), QBrush (QColor ("White"), Qt::SolidPattern));
+ center.setX(x);
+ center.setY(y);
+
+scene->addEllipse(QRectF(center.x()-r, center.y()-r, 2*r, 2*r), QPen (QColor("Black")), QBrush (QColor ("White"), Qt::SolidPattern));
 break;
 
 case 4:
@@ -120,9 +120,9 @@ QColor c (num2col(argsN.at(3)));
 x = argsN.at(0);
 y = argsN.at(1);
 r = argsN.at(2);
- new_x = x-r;
- new_y = y-r;
-scene->addEllipse(new_x,new_y,r,r, QPen (c), QBrush (QColor ("White"), Qt::SolidPattern));
+center.setX(x);
+center.setY(y);
+scene->addEllipse(QRectF(center.x()-r, center.y()-r, 2*r, 2*r), QPen (c), QBrush (QColor ("White"), Qt::SolidPattern));
 break;
 }
     }
@@ -160,9 +160,15 @@ if (it != 0) {
     colornum =c;
     if (it != 0  && colornum != -1) {
         QAbstractGraphicsShapeItem *item;
-        if  (item == dynamic_cast <QAbstractGraphicsShapeItem * > (it)) {
+        if  (item = dynamic_cast <QAbstractGraphicsShapeItem * > (it)) {
             item->setBrush(QColor(num2col(colornum)));
         }
+        else {qDebug() << "item is not a QAbstractGraphicsShapeItem";
+           /* if (QGraphicsEllipseItem *ell =dynamic_cast <QGraphicsEllipseItem * > (it)) {
+               ell->setBrush(QColor(num2col(colornum)));
+            }*/
+        }
+
     }
 
 
