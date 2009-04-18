@@ -33,6 +33,8 @@ private:
     short colornum;
     int runCode (QString op, QString args);
     QStringList drawOperations; //список операторов рисования
+    int SCREEN; //номер экрана
+
 };
 
 #endif // RUNWINDOW_H

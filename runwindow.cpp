@@ -3,7 +3,7 @@
 
 runWindow::runWindow(QWidget *parent) :
     QDialog(parent),
-    m_ui(new Ui::runWindow)
+    m_ui(new Ui::runWindow),    SCREEN (0)
 {
     m_ui->setupUi(this);
 scene = new QGraphicsScene (this);
@@ -16,6 +16,8 @@ void runWindow::appendOperations() {
     drawOperations.append("CIRCLE");
     drawOperations.append("LINE");
     drawOperations.append("PAINT");
+    drawOperations.append("SCREEN");
+    drawOperations.append("CLS");
 }
 
 
@@ -44,6 +46,9 @@ QString strArgs = str.rightRef(str.count() -1 - i).toString();
 if (drawOperations.contains(opstr)) {
 runCode(opstr, strArgs);
 }
+else {
+QMessageBox::critical(this, tr("QtQBASIC"), tr ("Incorrect operator: %1").arg(opstr));
+}
 }
 }
 runWindow::~runWindow()
@@ -60,6 +65,7 @@ int runWindow::runCode(QString op, QString args) {
     else if (op == "LINE") { onLine(args);}
     else if (op == "PAINT") { onPaint(args);}
     else if (op == "CLS") {onCls(args);}
+    else if (op == "SCREEN"){SCREEN = args.toInt();}
     else {/* here is ERROR */
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
