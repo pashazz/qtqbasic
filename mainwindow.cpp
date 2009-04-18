@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionRedo, SIGNAL (triggered()), ui->plainTextEdit, SLOT (redo()));
     connect (ui->actionUndo, SIGNAL (triggered()), ui->plainTextEdit, SLOT (undo()));
     connect (ui->actionFind, SIGNAL (triggered()), this, SLOT (findText()));
+
     setCentralWidget(ui->plainTextEdit);
     setCurrent("");
 
@@ -32,7 +33,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     //create edit actions
 createEditToolbar();
-ui->statusBar->showMessage(tr("QtQBasic started"));
+    ui->actionUndo->setEnabled(ui->plainTextEdit->document()->isUndoAvailable());
+    ui->actionRedo->setEnabled(ui->plainTextEdit->document()->isRedoAvailable());
+    ui->statusBar->showMessage(tr("QtQBasic started"));
+
 
 
 
@@ -50,11 +54,14 @@ void MainWindow::setCurrent(const QString &fileName) {
     else
         title.append(strippedName(curFile));
 
+    title.append("[*]");
     setWindowTitle(title);
 update();
 }
 void MainWindow::wasModified() {
     setWindowModified(ui->plainTextEdit->document()->isModified());
+    ui->actionUndo->setEnabled(ui->plainTextEdit->document()->isUndoAvailable());
+    ui->actionRedo->setEnabled(ui->plainTextEdit->document()->isRedoAvailable());
 }
 
 bool MainWindow::saveFile() {

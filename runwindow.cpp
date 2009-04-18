@@ -1,9 +1,6 @@
 #include "runwindow.h"
 #include "ui_runwindow.h"
 
-
-
-
 runWindow::runWindow(QWidget *parent) :
     QDialog(parent),
     m_ui(new Ui::runWindow)
@@ -20,37 +17,29 @@ void runWindow::appendOperations() {
     drawOperations.append("LINE");
     drawOperations.append("PAINT");
 }
+
+
+
 int runWindow::start (QString code)
 {
-
-
-    //spit
     QStringList strs = code.split("\n");
     QString str;
-    qDebug () << "strs  is" << strs;
+
     foreach (str, strs) {
             //find operator
     QRegExp op ("(^[A-Z]+)",Qt::CaseSensitive,QRegExp::RegExp);
-/*    if (!op.exactMatch(str)) {
-       QMessageBox msg;
-       msg.setText("error exp");
-       msg.setWindowTitle("error");
-       msg.exec();
-    return;
-    }
-*/
-//qDebug() << op.matchedLength();
+
 //operator here
 QString opstr;
 int i;
 for (i = op.indexIn(str); i != op.matchedLength(); ++i) {
     opstr.append(str.at (i));
 }
-qDebug () << "opstr is" << opstr;
+
 
 QString strArgs = str.rightRef(str.count() -1 - i).toString();
 //if (str.count()  - i == 0) {strArgs = "";} //maybe it need
-qDebug () << "strArgs is " << strArgs;
+
 
 if (drawOperations.contains(opstr)) {
 runCode(opstr, strArgs);
@@ -180,8 +169,6 @@ if (it != 0) {
      m_ui->gview->setBackgroundBrush(b);
      m_ui->gview->update();
     }
-
-
 }
 }
 void runWindow::onLine (const QString &args) {
@@ -326,4 +313,7 @@ if (color == 14) {c.setNamedColor("White");}
 
 void runWindow::onCls(const QString &args) {
     scene->clear();
+}
+void runWindow::keyPressEvent(QKeyEvent *e) {
+   this->close();
 }

@@ -23,7 +23,7 @@ protected:
     void onPaint (const QString &args);
     QColor num2col (short color);
     void onCls (const QString &args);
-
+    virtual void keyPressEvent(QKeyEvent *e);
 
 private:
     Ui::runWindow *m_ui;
@@ -31,10 +31,8 @@ private:
     QGraphicsItem *it; //использую в Paint
     QGraphicsScene *scene;
     short colornum;
-int runCode (QString op, QString args);
-
-QStringList drawOperations; //список операторов рисования
-
+    int runCode (QString op, QString args);
+    QStringList drawOperations; //список операторов рисования
 };
 
 #endif // RUNWINDOW_H

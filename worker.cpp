@@ -1,6 +1,12 @@
 #include "worker.h"
 #include <QtGui>
-#include <QFile>
+QString Worker::syntaxCheck(const QString &op, const QString &args) {
+    if (op == "LINE") {
+
+
+    }
+
+}
 Worker::Worker()
 
 {

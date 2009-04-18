@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>664</width>
-    <height>520</height>
+    <height>528</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,6 +27,24 @@
      <widget class="QGraphicsView" name="gview"/>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>504</y>
+     <width>191</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Press any key to continue</string>
+   </property>
   </widget>
  </widget>
  <resources/>
