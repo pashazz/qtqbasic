@@ -48,7 +48,7 @@ void MainWindow::setCurrent(const QString &fileName) {
     curFile = fileName;
     ui->plainTextEdit->document()->setModified(false);
     setWindowModified(false);
-    QString title = "QtQBasic - GIT - ";
+    QString title = tr("QtQBasic - GIT - ");
     if (curFile.isEmpty())
         title.append(tr("noname.bas"));
     else

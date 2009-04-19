@@ -21,5 +21,6 @@
         <file>images/textunder.png</file>
         <file>images/zoomin.png</file>
         <file>images/zoomout.png</file>
+        <file>translations/tr_ru.qm</file>
     </qresource>
 </RCC>

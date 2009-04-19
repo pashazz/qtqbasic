@@ -20,3 +20,4 @@ FORMS += mainwindow.ui \
     about.ui \
     finder.ui
 RESOURCES += qtqbasic.qrc
+TRANSLATIONS = translations/tr_ru.ts

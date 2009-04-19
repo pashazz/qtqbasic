@@ -69,7 +69,7 @@ int runWindow::runCode(QString op, QString args) {
     else {/* here is ERROR */
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
-        msg.setText("Incorrect operator: " + op);
+        msg.setText(tr("Incorrect operator: ") + op);
         msg.setWindowTitle("Error,aborting");
         msg.exec();
 
