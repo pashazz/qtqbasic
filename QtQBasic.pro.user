@@ -60,7 +60,7 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5WEJdmCeS0,guid=8a60f704392394e021b449ff49e9d731</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-B3TP6ABOPG,guid=3e5fc86b7d2bb01a57a4ef8b49edb320</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -88,7 +88,7 @@
     <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
     <value type="QString" >LOGNAME=pasha</value>
     <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString" >OPENGL_PROFILE=ati</value>
+    <value type="QString" >OPENGL_PROFILE=xorg-x11</value>
     <value type="QString" >PAGER=/usr/bin/less</value>
     <value type="QString" >PATH=/opt/qtsdk-2009.01/qt/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/qt/3/lib64/pkgconfig</value>
@@ -98,7 +98,7 @@
     <value type="QString" >QTDIR=/opt/qtsdk-2009.01/qt</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/14753,unix/pashazz:/tmp/.ICE-unix/14753</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/16472,unix/pashazz:/tmp/.ICE-unix/16472</value>
     <value type="QString" >SHELL=/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
@@ -122,7 +122,7 @@
     <value type="QString" >CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/opt/qtsdk-2009.01/qt/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/pasha/work/QtQBasic</value>
    <value key="buildConfiguration" type="int" >10</value>
   </valuemap>
@@ -136,7 +136,7 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5WEJdmCeS0,guid=8a60f704392394e021b449ff49e9d731</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-B3TP6ABOPG,guid=3e5fc86b7d2bb01a57a4ef8b49edb320</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -164,7 +164,7 @@
     <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
     <value type="QString" >LOGNAME=pasha</value>
     <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString" >OPENGL_PROFILE=ati</value>
+    <value type="QString" >OPENGL_PROFILE=xorg-x11</value>
     <value type="QString" >PAGER=/usr/bin/less</value>
     <value type="QString" >PATH=/opt/qtsdk-2009.01/qt/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/qt/3/lib64/pkgconfig</value>
@@ -174,7 +174,7 @@
     <value type="QString" >QTDIR=/opt/qtsdk-2009.01/qt</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/14753,unix/pashazz:/tmp/.ICE-unix/14753</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/16472,unix/pashazz:/tmp/.ICE-unix/16472</value>
     <value type="QString" >SHELL=/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>

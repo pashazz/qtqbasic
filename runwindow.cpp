@@ -70,7 +70,7 @@ int runWindow::runCode(QString op, QString args) {
         QMessageBox msg;
         msg.setIcon(QMessageBox::Critical);
         msg.setText(tr("Incorrect operator: ") + op);
-        msg.setWindowTitle("Error,aborting");
+        msg.setWindowTitle(tr("Error,aborting"));
         msg.exec();
 
     return -1;
@@ -89,8 +89,8 @@ void runWindow::onCircle(const  QString &args) {
 int args_count = lstArgs.count();
 if (args_count < 3) {
         QMessageBox msg;
-        msg.setText("Please add  arguments");
-        msg.setWindowTitle("Error, aborting...");
+        msg.setText(tr("Please add  arguments"));
+        msg.setWindowTitle(tr("Error, aborting..."));
         msg.exec();
         return;
     }
@@ -134,8 +134,8 @@ void runWindow::onPaint (const QString &args) {
 int args_count = lstArgs.count();
 if (args_count < 2) {
         QMessageBox msg;
-        msg.setText("Please add  arguments");
-        msg.setWindowTitle("Error, aborting...");
+        msg.setText(tr("Please add  arguments"));
+        msg.setWindowTitle(tr("Error, aborting..."));
         msg.exec();
         return;
     }
@@ -186,8 +186,8 @@ QStringList lstArgs = args.split(split);
 int args_count = lstArgs.count();
 if (args_count < 3) {
         QMessageBox msg;
-        msg.setText("Please add  arguments");
-        msg.setWindowTitle("Error, aborting...");
+        msg.setText(tr("Please add  arguments"));
+        msg.setWindowTitle(tr("Error, aborting..."));
         msg.exec();
         return;
     }

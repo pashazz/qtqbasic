@@ -37,6 +37,11 @@
         <translation>QtQBasic запущен</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="51"/>
+        <source>QtQBasic - GIT - </source>
+        <translation>QtQBasic -GIT</translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="53"/>
         <source>noname.bas</source>
         <translation>безымянный.bas</translation>
@@ -123,7 +128,7 @@
     <message>
         <location filename="../mainwindow.ui" line="109"/>
         <source>Ctrl+R</source>
-        <translation>Ctrl+К</translation>
+        <translation>Ctrl+R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="114"/>
@@ -267,6 +272,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../runwindow.cpp" line="50"/>
         <source>Incorrect operator: %1</source>
         <translation>Некорректный оператор: %1</translation>
+    </message>
+    <message>
+        <location filename="../runwindow.cpp" line="72"/>
+        <source>Incorrect operator: </source>
+        <translation>Некорректный оператор:</translation>
     </message>
     <message>
         <location filename="../runwindow.ui" line="14"/>
