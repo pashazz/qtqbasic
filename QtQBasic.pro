@@ -9,12 +9,14 @@ SOURCES += main.cpp \
     worker.cpp \
     runwindow.cpp \
     about.cpp \
-    finder.cpp
+    finder.cpp \
+    codeanalyzer.cpp
 HEADERS += mainwindow.h \
     worker.h \
     runwindow.h \
     about.h \
-    finder.h
+    finder.h \
+    codeanalyzer.h
 FORMS += mainwindow.ui \
     runwindow.ui \
     about.ui \

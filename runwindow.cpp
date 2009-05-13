@@ -1,86 +1,32 @@
 #include "runwindow.h"
 #include "ui_runwindow.h"
+#include <QtDebug>
 
 runWindow::runWindow(QWidget *parent) :
     QDialog(parent),
-    m_ui(new Ui::runWindow),    SCREEN (0)
+    m_ui(new Ui::runWindow),    SCREEN (0), w(new Worker)
 {
     m_ui->setupUi(this);
 scene = new QGraphicsScene (this);
 colornum = -1;
   m_ui->gview->setScene(scene);
   m_ui->gview->setRenderHints(QPainter::Antialiasing | QPainter::TextAntialiasing);
-  appendOperations();
-}
-void runWindow::appendOperations() {
-    drawOperations.append("CIRCLE");
-    drawOperations.append("LINE");
-    drawOperations.append("PAINT");
-    drawOperations.append("SCREEN");
-    drawOperations.append("CLS");
+;
 }
 
 
 
-int runWindow::start (QString code)
-{
-    QStringList strs = code.split("\n");
-    QString str;
-
-    foreach (str, strs) {
-            //find operator
-    QRegExp op ("(^[A-Z]+)",Qt::CaseSensitive,QRegExp::RegExp);
-
-//operator here
-QString opstr;
-int i;
-for (i = op.indexIn(str); i != op.matchedLength(); ++i) {
-    opstr.append(str.at (i));
-}
-
-
-QString strArgs = str.rightRef(str.count() -1 - i).toString();
-//if (str.count()  - i == 0) {strArgs = "";} //maybe it need
-
-
-if (drawOperations.contains(opstr)) {
-runCode(opstr, strArgs);
-}
-else {
-QMessageBox::critical(this, tr("QtQBASIC"), tr ("Incorrect operator: %1").arg(opstr));
-}
-}
-}
 runWindow::~runWindow()
 {
     delete m_ui;
-
-}
-
-int runWindow::runCode(QString op, QString args) {
-    // Running the operator
-    op.toUpper();
-
-    if (op == "CIRCLE") { onCircle(args);}
-    else if (op == "LINE") { onLine(args);}
-    else if (op == "PAINT") { onPaint(args);}
-    else if (op == "CLS") {onCls(args);}
-    else if (op == "SCREEN"){SCREEN = args.toInt();}
-    else {/* here is ERROR */
-        QMessageBox msg;
-        msg.setIcon(QMessageBox::Critical);
-        msg.setText(tr("Incorrect operator: ") + op);
-        msg.setWindowTitle(tr("Error,aborting"));
-        msg.exec();
-
-    return -1;
-            }
-
+    delete w;
 
 
 }
+
 //this be coming soon
 void runWindow::onCircle(const  QString &args) {
+    qDebug() << "qtqb: circle";
     //объявим нужные переменные
     qreal x = 0, y = 0, r = 0;
 

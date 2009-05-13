@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "runwindow.h"
+
+#include "codeanalyzer.h"
 #include <QtDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindowClass)
@@ -74,9 +75,8 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::onRun() {
-    runWindow *w = new runWindow(this);
-    w->start (ui->plainTextEdit->toPlainText());
-    w->show();
+   CodeAnalyzer *c = new CodeAnalyzer(ui->plainTextEdit->toPlainText(), this);
+
 }
 
 void MainWindow::exit () {

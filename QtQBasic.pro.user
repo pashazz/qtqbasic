@@ -6,11 +6,19 @@
  </data>
  <data>
   <variable>RunConfiguration0-ProFile</variable>
-  <value type="QString" >/home/pasha/work/QtQBasic/QtQBasic.pro</value>
+  <value type="QString" >QtQBasic.pro</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
   <value type="QString" >QtQBasic</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseDyldImageSuffix</variable>
+  <value type="bool" >false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseTerminal</variable>
+  <value type="bool" >false</value>
  </data>
  <data>
   <variable>RunConfiguration0-UserSetName</variable>
@@ -49,6 +57,73 @@
   <variable>buildconfiguration-Debug-buildstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList" >
+    <value type="QString" >ANT_HOME=/usr/share/ant</value>
+    <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
+    <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
+    <value type="QString" >CVS_RSH=ssh</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-lRdXBEVBWG,guid=99b589ed515de9bb6c1642854a05ad51</value>
+    <value type="QString" >DESKTOP_SESSION=default</value>
+    <value type="QString" >DESKTOP_STARTUP_ID=</value>
+    <value type="QString" >DISPLAY=:0.0</value>
+    <value type="QString" >DM_CONTROL=/var/run/xdmctl</value>
+    <value type="QString" >EDITOR=/bin/nano</value>
+    <value type="QString" >GCC_SPECS=</value>
+    <value type="QString" >GDK_USE_XFT=1</value>
+    <value type="QString" >GS_LIB=/home/pasha/.fonts</value>
+    <value type="QString" >GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/pasha/.gtkrc-2.0:/home/pasha/.gtkrc-2.0-kde4:/home/pasha/.kde4/share/config/gtkrc-2.0</value>
+    <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pasha/.gtkrc::/home/pasha/.kde4/share/config/gtkrc</value>
+    <value type="QString" >HOME=/home/pasha</value>
+    <value type="QString" >INFOPATH=/usr/share/info:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/info:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/info</value>
+    <value type="QString" >JAVAC=/etc/java-config-2/current-system-vm/bin/javac</value>
+    <value type="QString" >JAVA_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >JDK_HOME=/etc/java-config-2/current-system-vm</value>
+    <value type="QString" >KDE_FULL_SESSION=true</value>
+    <value type="QString" >KDE_MULTIHEAD=false</value>
+    <value type="QString" >KDE_SESSION_UID=1000</value>
+    <value type="QString" >KDE_SESSION_VERSION=4</value>
+    <value type="QString" >LANG=ru_RU.UTF-8</value>
+    <value type="QString" >LC_ALL=</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib64/qtcreator:</value>
+    <value type="QString" >LESS=-R -M --shift 5</value>
+    <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
+    <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
+    <value type="QString" >LOGNAME=pasha</value>
+    <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
+    <value type="QString" >OPENGL_PROFILE=ati</value>
+    <value type="QString" >PAGER=/usr/bin/less</value>
+    <value type="QString" >PATH=/opt/qtsdk-2009.01/qt/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
+    <value type="QString" >PKG_CONFIG_PATH=/usr/qt/3/lib64/pkgconfig</value>
+    <value type="QString" >PRELINK_PATH_MASK=/usr/lib64/klibc</value>
+    <value type="QString" >PWD=/home/pasha/Документы</value>
+    <value type="QString" >QMAKESPEC=linux-g++</value>
+    <value type="QString" >QTDIR=/opt/qtsdk-2009.01/qt</value>
+    <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
+    <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/30403,unix/pashazz:/tmp/.ICE-unix/30403</value>
+    <value type="QString" >SHELL=/bin/zsh</value>
+    <value type="QString" >SHLVL=1</value>
+    <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
+    <value type="QString" >USB_DEVFS_PATH=/dev/bus/usb</value>
+    <value type="QString" >USER=pasha</value>
+    <value type="QString" >WINDOWPATH=7</value>
+    <value type="QString" >XCURSOR_THEME=ComixCursors-opaque-Black-Large-Slim</value>
+    <value type="QString" >XDG_CONFIG_DIRS=/etc/xdg</value>
+    <value type="QString" >XDG_DATA_DIRS=/usr/share:/usr/local/share:/usr/share</value>
+    <value type="QString" >XDG_MENU_PREFIX=kde-4.2-</value>
+    <value type="QString" >XDM_MANAGED=method=classic</value>
+    <value type="QString" >XSESSION=kde-4.2</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList" >
+    <value type="QString" >/home/pasha/work/QtQBasic/QtQBasic.pro</value>
+    <value type="QString" >-spec</value>
+    <value type="QString" >linux-g++-64</value>
+    <value type="QString" >-r</value>
+    <value type="QString" >CONFIG+=debug_and_release</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString" >/opt/qtsdk-2009.01/qt/bin/qmake</value>
+   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.workingDirectory" type="QString" >/home/pasha/work/QtQBasic</value>
   </valuemap>
  </data>
  <data>
@@ -60,7 +135,7 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-B3TP6ABOPG,guid=3e5fc86b7d2bb01a57a4ef8b49edb320</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-lRdXBEVBWG,guid=99b589ed515de9bb6c1642854a05ad51</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -81,24 +156,24 @@
     <value type="QString" >KDE_SESSION_UID=1000</value>
     <value type="QString" >KDE_SESSION_VERSION=4</value>
     <value type="QString" >LANG=ru_RU.UTF-8</value>
-    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LC_ALL=</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib64/qtcreator:</value>
     <value type="QString" >LESS=-R -M --shift 5</value>
     <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
     <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
     <value type="QString" >LOGNAME=pasha</value>
     <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString" >OPENGL_PROFILE=xorg-x11</value>
+    <value type="QString" >OPENGL_PROFILE=ati</value>
     <value type="QString" >PAGER=/usr/bin/less</value>
     <value type="QString" >PATH=/opt/qtsdk-2009.01/qt/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/qt/3/lib64/pkgconfig</value>
     <value type="QString" >PRELINK_PATH_MASK=/usr/lib64/klibc</value>
-    <value type="QString" >PWD=/home/pasha</value>
+    <value type="QString" >PWD=/home/pasha/Документы</value>
     <value type="QString" >QMAKESPEC=linux-g++</value>
     <value type="QString" >QTDIR=/opt/qtsdk-2009.01/qt</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/16472,unix/pashazz:/tmp/.ICE-unix/16472</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/30403,unix/pashazz:/tmp/.ICE-unix/30403</value>
     <value type="QString" >SHELL=/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
@@ -111,24 +186,18 @@
     <value type="QString" >XDG_MENU_PREFIX=kde-4.2-</value>
     <value type="QString" >XDM_MANAGED=method=classic</value>
     <value type="QString" >XSESSION=kde-4.2</value>
-    <value type="QString" >_=/usr/bin/kdeinit4</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
-    <value type="QString" >/home/pasha/work/QtQBasic/QtQBasic.pro</value>
-    <value type="QString" >-spec</value>
-    <value type="QString" >linux-g++-64</value>
-    <value type="QString" >-r</value>
-    <value type="QString" >CONFIG+=debug_and_release</value>
-    <value type="QString" >CONFIG+=debug</value>
+    <value type="QString" >-w</value>
    </valuelist>
-   <value key="abstractProcess.command" type="QString" >/opt/qtsdk-2009.01/qt/bin/qmake</value>
+   <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/pasha/work/QtQBasic</value>
    <value key="buildConfiguration" type="int" >10</value>
   </valuemap>
  </data>
  <data>
-  <variable>buildconfiguration-Debug-buildstep2</variable>
+  <variable>buildconfiguration-Debug-cleanstep0</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
@@ -136,7 +205,7 @@
     <value type="QString" >CONFIG_PROTECT=/usr/share/config</value>
     <value type="QString" >CONFIG_PROTECT_MASK=/etc/gentoo-release /etc/sandbox.d /etc/env.d/java/ /etc/udev/rules.d /etc/fonts/fonts.conf /etc/gconf /etc/terminfo /etc/ca-certificates.conf /etc/revdep-rebuild /etc/splash</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-B3TP6ABOPG,guid=3e5fc86b7d2bb01a57a4ef8b49edb320</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-sTECU5kER9,guid=d8fc3fe2e8d3063dd9baa7364a01737d</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -159,22 +228,23 @@
     <value type="QString" >LANG=ru_RU.UTF-8</value>
     <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LC_ALL=</value>
+    <value type="QString" >LD_LIBRARY_PATH=/usr/lib64/qtcreator:</value>
     <value type="QString" >LESS=-R -M --shift 5</value>
     <value type="QString" >LESSOPEN=|lesspipe.sh %s</value>
     <value type="QString" >LIBGL_DRIVERS_PATH=/usr/lib64/dri:/usr/lib32/dri:/usr/lib32/dri:/usr/lib64/dri</value>
     <value type="QString" >LOGNAME=pasha</value>
     <value type="QString" >MANPATH=/etc/java-config-2/current-system-vm/man:/usr/local/share/man:/usr/share/man:/usr/share/binutils-data/x86_64-pc-linux-gnu/2.19.1/man:/usr/share/gcc-data/x86_64-pc-linux-gnu/4.3.3/man:/etc/java-config/system-vm/man/:/usr/qt/3/doc/man:/opt/opera/share/man</value>
-    <value type="QString" >OPENGL_PROFILE=xorg-x11</value>
+    <value type="QString" >OPENGL_PROFILE=ati</value>
     <value type="QString" >PAGER=/usr/bin/less</value>
     <value type="QString" >PATH=/opt/qtsdk-2009.01/qt/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.3.3:/usr/qt/3/bin:/usr/games/bin</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/qt/3/lib64/pkgconfig</value>
     <value type="QString" >PRELINK_PATH_MASK=/usr/lib64/klibc</value>
-    <value type="QString" >PWD=/home/pasha</value>
+    <value type="QString" >PWD=/home/pasha/Документы</value>
     <value type="QString" >QMAKESPEC=linux-g++</value>
     <value type="QString" >QTDIR=/opt/qtsdk-2009.01/qt</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/pasha/.kde4/lib64/kde4/plugins/:/usr/lib64/kde4/plugins/</value>
     <value type="QString" >SANE_CONFIG_DIR=/etc/sane.d</value>
-    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/16472,unix/pashazz:/tmp/.ICE-unix/16472</value>
+    <value type="QString" >SESSION_MANAGER=local/pashazz:@/tmp/.ICE-unix/15849,unix/pashazz:/tmp/.ICE-unix/15849</value>
     <value type="QString" >SHELL=/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >STRIGI_PLUGIN_PATH=/usr/lib64/strigi:</value>
@@ -187,30 +257,14 @@
     <value type="QString" >XDG_MENU_PREFIX=kde-4.2-</value>
     <value type="QString" >XDM_MANAGED=method=classic</value>
     <value type="QString" >XSESSION=kde-4.2</value>
-    <value type="QString" >_=/usr/bin/kdeinit4</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
-    <value type="QString" >debug</value>
+    <value type="QString" >clean</value>
     <value type="QString" >-w</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/pasha/work/QtQBasic</value>
-   <valuelist key="makeargs" type="QVariantList" >
-    <value type="QString" >debug</value>
-   </valuelist>
-  </valuemap>
- </data>
- <data>
-  <variable>buildconfiguration-Debug-cleanstep0</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildconfiguration-Debug-cleanstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Debug</value>
   </valuemap>
  </data>
  <data>
@@ -227,22 +281,7 @@
   </valuemap>
  </data>
  <data>
-  <variable>buildconfiguration-Release-buildstep2</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-   <valuelist key="makeargs" type="QVariantList" >
-    <value type="QString" >release</value>
-   </valuelist>
-  </valuemap>
- </data>
- <data>
   <variable>buildconfiguration-Release-cleanstep0</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
-  </valuemap>
- </data>
- <data>
-  <variable>buildconfiguration-Release-cleanstep1</variable>
   <valuemap type="QVariantMap" >
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" >Release</value>
   </valuemap>
@@ -268,15 +307,8 @@
   </valuemap>
  </data>
  <data>
-  <variable>buildstep2</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
-  </valuemap>
- </data>
- <data>
   <variable>buildsteps</variable>
   <valuelist type="QVariantList" >
-   <value type="QString" >trolltech.qt4projectmanager.gdbmaros</value>
    <value type="QString" >trolltech.qt4projectmanager.qmake</value>
    <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
@@ -289,16 +321,8 @@
   </valuemap>
  </data>
  <data>
-  <variable>cleanstep1</variable>
-  <valuemap type="QVariantMap" >
-   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString" ></value>
-   <value key="clean" type="bool" >true</value>
-  </valuemap>
- </data>
- <data>
   <variable>cleansteps</variable>
   <valuelist type="QVariantList" >
-   <value type="QString" >trolltech.qt4projectmanager.gdbmaros</value>
    <value type="QString" >trolltech.qt4projectmanager.make</value>
   </valuelist>
  </data>
