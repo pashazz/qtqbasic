@@ -75,6 +75,7 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::onRun() {
+    qDebug("qtqbasic: run program");
    CodeAnalyzer *c = new CodeAnalyzer(ui->plainTextEdit->toPlainText(), this);
 
 }

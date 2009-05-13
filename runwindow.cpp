@@ -48,6 +48,7 @@ foreach (arg, lstArgs) {
 
 }
 QPointF center;
+qDebug() << "draw circle" << argsN;
 switch (argsN.count()) {
 case 3:
 x = argsN.at(0);
@@ -126,6 +127,7 @@ if (it != 0) {
 void runWindow::onLine (const QString &args) {
     //нужные переменные
     qreal x1 = 0, y1 = 0,  x2 = 0,  y2 = 0;
+qDebug() << "Draw a line";
 
 QRegExp split (",|-");
 QStringList lstArgs = args.split(split);

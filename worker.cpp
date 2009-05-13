@@ -39,13 +39,18 @@ void Worker::replaceVarsValues(QString &code) {
 
 }
 Operation Worker::detectOper(const QString &codeString) {
+    qDebug() << "detect str code";
+
     if (codeString.contains('=')) {
+        qDebug("variable");
         return variable;
+
     }
     //здесь не доделано
-      //find operator
+   else {   //find operator
     QRegExp rx ("(^[A-Z]+)",Qt::CaseSensitive,QRegExp::RegExp);
     if (rx.exactMatch(codeString))
+        qDebug("operator");
         return op;
-
+}
 }

@@ -1,6 +1,6 @@
 #include "codeanalyzer.h"
 
-CodeAnalyzer::CodeAnalyzer(const QString &code, QWidget *parent) : w (new Worker), wind (new runWindow(parent))
+CodeAnalyzer::CodeAnalyzer(const QString &code, QWidget *parent) : w (new Worker()), wind (new runWindow(parent))
 {
     _code = code;
     _parent = parent;
@@ -9,7 +9,7 @@ CodeAnalyzer::CodeAnalyzer(const QString &code, QWidget *parent) : w (new Worker
 }
 int CodeAnalyzer::start ()
 {
-
+qDebug("analyze code");
     QStringList strs = _code.split("\n");
     QString str;
 wind->show();
@@ -25,7 +25,7 @@ wind->show();
 
      if (w->detectOper(str) == op) {
          QRegExp rx ("(^[A-Z]+)",Qt::CaseSensitive,QRegExp::RegExp);
-
+qDebug("operator detected");
 //operator here
 QString opstr;
 int i;
